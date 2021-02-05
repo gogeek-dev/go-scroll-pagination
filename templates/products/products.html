@@ -1,0 +1,54 @@
+<title> Products </title>
+
+{{ template "templates/layouts/header.html" .}}
+
+
+<div class="page-wrapper">
+
+  <div class="box-wrapper"   id="viewscroll" >
+
+    <div class="breadcrumbs">
+      <ul class="flex">
+        <li><a href="javascript:void(0)">Home</a></li>
+        <li>></li>
+
+        <li><a href="javascript:void(0)">Products </a></li>
+      </ul>
+    </div>
+
+    {{ range.}}
+    <div class="flex product-list-row">
+      <div class="pl-img"> <img src="{{.Imagepath}}"> </div>
+      <div class="pl-content">
+        <h3><a href="product-detail.html">{{.Title}}</a></h3>
+        <div class="flex rev-row">
+          <i class="fas fa-star active"></i>
+          <i class="fas fa-star active"></i>
+          <i class="fas fa-star active"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <p>(194 Reviews)</p>
+        </div>
+        <h2>₹{{.Price}}</h2>
+        <ul class="prd-dtl">
+          <li>Filling Material: Foam</li>
+          <li>Frame Material: Solid Wood</li>
+          <li>DIY - Basic assembly to be done with simple tools by the customer, comes with instructions.</li>
+          <li>This sofa set is a clear all-rounder</li>
+        </ul>
+        <div class="atc-wish flex">              
+            <a href="javascript:Void(0)" class="flex"><span></span> Add to Wishlist</a>
+            <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    {{ end }}
+
+
+  </div>
+
+</div>
+
+
+{{ template "templates/layouts/footer.html"}}
